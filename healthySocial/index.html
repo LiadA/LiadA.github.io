@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Did You Know?</title>
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+</head>
+
+<body>
+<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+
+<h1>How Well Do You Really Know Your Colleagues?</h1>
+
+<button name = "button" id="start_button">
+Click to get a question</button>
+
+<p id = "question"></p>
+
+<form id = "answer" name= "answer">
+	Answer:<br>
+	<input type="text" name="Answer" id="form_answer" value="" placeholder="Enter Your Answer">
+	<br>
+	<input type="submit" value="Submit" id="submit" >
+</form>
+
+<p id="results"></p>
+
+</body>
+<script type="text/javascript">
+$(document).ready(function() {
+  
+
+var data_dictionary = [{"question":"How many brothers does Ohad have?",
+						"answer":"3"},
+						{"question":"What is the name of Itay's app?",
+						"answer":"turns"},
+						{"question":"Where Idom lived in the past?",
+						"answer":"seattle"},
+						{"question":"When Ido is going to propose?",
+						"answer":"never"},
+						{"question":"How tall Matan is?",
+						"answer":"1.93"},
+						{"question":"Where Eitan and his wife first met?",
+						"answer":"south america"},
+						{"question":"Where is Shachar secret slick?",
+						"answer":"underneath the sink"},
+						{"question":"From where Joel's girlfriend?",
+						"answer":"columbia"},
+						{"question":"What is Yonatan's iphone password?",
+						"answer":"1948"}]
+
+var current_object;
+
+$("#start_button").click(function(event){
+		event.preventDefault();
+		getQuestion();
+	})
+
+function getQuestion(){
+	
+    rand = Math.floor(Math.random() * data_dictionary.length + 0);
+    console.log(rand);
+    current_object = data_dictionary[rand];
+    document.getElementById("question").innerHTML = current_object["question"];
+ }
+
+function getAnswer(){
+	var userAnswer = document.getElementById("form_answer").value;
+	console.log(userAnswer);
+	
+	var isTrue = "Wrong answer, please try again.";
+	if (current_object["answer"].toUpperCase() == userAnswer.toUpperCase()) {
+
+			isTrue = "You are correct!!";
+			
+		
+	}
+	console.log(isTrue);
+	document.getElementById("results").innerHTML = isTrue;
+	
+
+}
+$("#submit").click(function(event){
+		event.preventDefault();
+		getAnswer();
+	})
+});
+</script>
+</html>
