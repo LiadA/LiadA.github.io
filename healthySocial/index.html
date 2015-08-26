@@ -6,10 +6,11 @@
 </head>
 
 <body>
+<!-- <img src="http://img3.wikia.nocookie.net/__cb20140210053226/muppet/images/b/b1/Giles_deacon_miss_piggy_04a.png" alt="some_text" id = "photo"> -->
 <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
-
+<div id = "center">
 <h1>How Well Do You Really Know Your Colleagues?</h1>
-
+<span></span>
 <button name = "button" id="start_button">
 Click to get a question</button>
 
@@ -17,13 +18,15 @@ Click to get a question</button>
 
 <form id = "answer" name= "answer">
 	Answer:<br>
+	<span></span>
 	<input type="text" name="Answer" id="form_answer" value="" placeholder="Enter Your Answer">
 	<br>
+	<span></span>
 	<input type="submit" value="Submit" id="submit" >
 </form>
 
 <p id="results"></p>
-
+</div>
 </body>
 <script type="text/javascript">
 $(document).ready(function() {
@@ -31,7 +34,7 @@ $(document).ready(function() {
 
 var data_dictionary = [{"question":"How many brothers does Ohad have?",
 						"answer":"3"},
-						{"question":"What is the name of Itay's app?",
+						{"question":"What is the name of Itai's app?",
 						"answer":"turns"},
 						{"question":"Where Idom lived in the past?",
 						"answer":"seattle"},
