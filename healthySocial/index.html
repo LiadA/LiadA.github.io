@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans|Indie+Flower' rel='stylesheet' type='text/css'>
 <title>Did You Know?</title>
 <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 </head>
@@ -8,26 +9,32 @@
 <body>
 <!-- <img src="http://img3.wikia.nocookie.net/__cb20140210053226/muppet/images/b/b1/Giles_deacon_miss_piggy_04a.png" alt="some_text" id = "photo"> -->
 <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
-<div id = "center">
-<h1>How Well Do You Really Know Your Colleagues?</h1>
-<span></span>
-<button name = "button" id="start_button">
-Click to get a question</button>
+<div id = "container">
+	<div id = "left" class = "column">
+		<h1>How Well Do You Really Know Your Colleagues?</h1>
+	</div>
+	<div id = "right" class="column">
+		<span></span>
+		<button name = "button" id="start_button">
+		Click to get a question</button>
 
-<p id = "question"></p>
+		<p id = "question"></p>
 
-<form id = "answer" name= "answer">
-	Answer:<br>
-	<span></span>
-	<input type="text" name="Answer" id="form_answer" value="" placeholder="Enter Your Answer">
-	<br>
-	<span></span>
-	<input type="submit" value="Submit" id="submit" >
-</form>
+		<form id = "answer" name= "answer">
+			Answer:<br>
+			<span></span>
+			<input type="text" name="Answer" id="form_answer" value="" placeholder="Enter Your Answer">
+			<br>
+			<span></span>
+			<input type="submit" value="Submit" id="submit" >
+		</form>
 
-<p id="results"></p>
+		<p id="results"></p>
+	</div>
 </div>
 </body>
+
+
 <script type="text/javascript">
 $(document).ready(function() {
   
@@ -74,7 +81,6 @@ function getAnswer(){
 	if (current_object["answer"].toUpperCase() == userAnswer.toUpperCase()) {
 
 			isTrue = "You are correct!!";
-			
 		
 	}
 	console.log(isTrue);
@@ -84,8 +90,15 @@ function getAnswer(){
 }
 $("#submit").click(function(event){
 		event.preventDefault();
-		getAnswer();
+		
+		
+		$("#results").fadeOut(100, getAnswer).fadeIn();
+			
+
+
 	})
 });
+
+
 </script>
 </html>

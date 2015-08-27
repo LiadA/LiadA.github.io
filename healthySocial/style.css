@@ -1,9 +1,10 @@
+
 body {
    /* background-image: url("http://orig06.deviantart.net/bcbc/f/2011/358/0/d/texture__stripes_by_cristalinawinx-d4k2u2h.png");*/
     background-color: #F4E6C6;
     text-align: center;
 }
-#center{
+#container{
   background-color:#F9EFD6;
   width: 1200px;
   margin:0 auto;
@@ -11,32 +12,69 @@ body {
   /*margin-bottom: 0 auto*/
   background-size: contain;
 }
+#container.column{
+
+float: left;
+}
+
+#left {
+  float: left;
+ /* padding: 10px 2% 10px 2%;*/
+  margin: 20px 1% 20px 2%;
+  background: #6BAB90;
+  border: 5px solid #F4E6C6;
+  width: 44%; /* ie5win fudge begins */
+  voice-family: "\"}\"";
+  voice-family:inherit;
+  width: 41%;
+  height:93%;
+}
+#right {
+  float: right;
+  /*padding: 10px 2% 10px 2%;*/
+  margin: 20px 2% 20px 1%;
+  background: #6BAB90;
+  border: 5px solid #F4E6C6;
+  width: 44%; /* ie5win fudge begins */
+  voice-family: "\"}\"";
+  voice-family:inherit;
+  width: 41%;
+  height:93%;
+  }
+
+#footer {
+  clear: both;
+}
+
+
+
 
 h1 {
-    color: #C191A1;
+    color: #E1F0C4;
     text-align: center;
-    font-size: 50px
+    font-size: 100px;
+    font-family: "indie flower";
 }
 
 
 
 p {
-    font-family: "Times New Roman";
+    font-family: "indie flower";
     font-size: 30px;
-    color:#FAB3A9;
+    color:#E1F0C4;
     font-weight: bold;
 }
 span{
 
     display:block; 
-    height: 25px;
+    height: 50px;
     /*width:1200px;*/
 }
 
 #answer {
-	   font-family: "Times New Roman";
+	   font-family: "indie flower";
     font-size: 40px;
-    color:#C191A1;
+    color:#E1F0C4;
     font-weight: bold;
 }
 
@@ -44,10 +82,10 @@ span{
   -webkit-border-radius: 7;
   -moz-border-radius: 7;
   border-radius: 7px;
-  font-family: Georgia;
+  font-family: "indie flower";
   color: #F4E6C6;
   font-size: 20px;
-  background: #6C698D;
+  background: #FAB3A9;
   padding: 10px 20px 10px 20px;
   text-decoration: none;
   text-align:center;
@@ -69,10 +107,10 @@ span{
   -webkit-border-radius: 7;
   -moz-border-radius: 7;
   border-radius: 7px;
-  font-family: Georgia;
+  font-family: "indie flower";
   color: #F4E6C6;
   font-size: 20px;
-  background: #6C698D;
+  background: #FAB3A9;
   padding: 10px 20px 10px 20px;
   text-decoration: none;
   text-align:center;
@@ -93,12 +131,13 @@ span{
   width: 300px;
   height:50px;
   font-size: 20px;
-  color:#FAB3A9;
+  color:#6BAB90;
   background:#F4E6C6; 
-  
+
 }
 input{
   text-align: center;
   color:#FAB3A9;
   font-weight: bold;
+  font-family: "indie flower";
 }
